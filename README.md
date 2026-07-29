@@ -136,8 +136,6 @@ Practical multi-project examples demonstrating C++20 Modules:
 
 Shows understanding of module structure and integration.
 
----
-
 ## Topics Covered
 
 - Modern C++ design (RAII, smart pointers, move semantics, constexpr)
@@ -178,3 +176,4 @@ Open the `.sln` file in Visual Studio and build normally.
 ## License
 
 MIT
+
