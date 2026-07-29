@@ -1,0 +1,10 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="Benchmarks/Benchmarks.vcxproj" Id="7a6a1b24-d0c0-485c-ae80-cd483144061f" />
+  <Project Path="Exercises/Exercises.vcxproj" Id="a549382e-0189-4240-8214-56701330a066" />
+  <Project Path="Tests/Tests.vcxproj" Id="8048cbbb-e7fb-4320-875c-9398211e7e6e" />
+</Solution>

@@ -1,0 +1,12 @@
+#VisualStudio
+.vs/
+
+#build
+build/
+Release/
+Debug/
+x64/
+x86/
+
+#local backup
+Backup/

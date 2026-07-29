@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Ex01_ImagePipeline">
+      <UniqueIdentifier>{5bc6a0b0-dc8d-413e-8897-965a21e7d233}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ex01_ImagePipeline\expected">
+      <UniqueIdentifier>{21a145a0-7769-4c9e-9a56-3461848cae22}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Ex01_ImagePipeline\image_pipeline_tests.cpp">
+      <Filter>Ex01_ImagePipeline</Filter>
+    </ClCompile>
+    <ClCompile Include="Ex02_JobSystem\job_tests.cpp" />
+    <ClCompile Include="Ex02_JobSystem\worker_thread_tests.cpp" />
+    <ClCompile Include="Ex02_JobSystem\job_scheduler_tests.cpp" />
+  </ItemGroup>
+</Project>
