@@ -1,6 +1,9 @@
 #VisualStudio
 .vs/
 
+#GitHub
+.github/
+
 #build
 build/
 Release/

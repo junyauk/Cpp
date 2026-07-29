@@ -112,6 +112,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\01_ConceptsBasics\01_ConceptsBasics.vcxproj">
