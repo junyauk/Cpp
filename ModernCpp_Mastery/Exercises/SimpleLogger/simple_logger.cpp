@@ -91,8 +91,8 @@ namespace SimpleLogger
 		case LogLevel::ERROR: oss << "[ERR "; break;
 		}
 
-		oss << "TID:" << std::this_thread::get_id() << ", ";
-		oss << "(" << m_file << ":" << m_line;
+		oss << "TID:" << std::this_thread::get_id();
+//		oss  << ", (" << m_file << ":" << m_line << ")";
 		oss << "] ";
 		oss << m_stream.str();
 		return oss.str();

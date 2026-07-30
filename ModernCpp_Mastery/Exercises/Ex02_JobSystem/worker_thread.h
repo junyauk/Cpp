@@ -25,8 +25,6 @@ namespace Ex02_JobSystem
 
 		void runProcessLoop(std::stop_token token)
 		{
-			LOG(INFO) << "WorkerThread::runProcessLooop(" << m_id << ") ->";
-
 			Ex02_JobSystem::t_currentWorkerId = m_id;
 
 			while (true)
@@ -38,13 +36,10 @@ namespace Ex02_JobSystem
 				std::optional<T> job = m_queue.pop();
 				if (job.has_value())
 				{
-					LOG(INFO) << " " << m_id << "       popped job";
 					job.value()();
 				}
 				else
 				{
-					LOG(INFO) << " " << m_id << "       m_queue is empty";
-
 					bool invoked = false;
 					uint32_t startIndex = (static_cast<uint32_t>(m_id) + 1) % m_workerThreads.size();
 
@@ -57,7 +52,6 @@ namespace Ex02_JobSystem
 							std::optional<T> j = w->steal();
 							if (j.has_value())
 							{
-								LOG(INFO) << " " << m_id << "       stealed job";
 								j.value()();
 								invoked = true;
 								break;
@@ -70,7 +64,6 @@ namespace Ex02_JobSystem
 					}
 				}
 			}
-			LOG(INFO) << "WorkerThread::runProcessLooop(" << m_id << ") <-";
 		}
 
 	public:
@@ -83,34 +76,25 @@ namespace Ex02_JobSystem
 
 		bool start()
 		{
-			LOG(INFO) << "WorkerThread::start(" << m_id << ") ->";
 			if (m_thread.joinable() || m_workerThreads.empty())
 			{
-				LOG(INFO) << "WorkerThread::start(m_joinable or siblings are empty) <-";
 				return false;
 			}
 
-//			m_thread = std::jthread(&WorkerThread::runProcessLoop, this);				// Directly pass
 			m_thread = std::jthread([this](std::stop_token st) { runProcessLoop(st); });// Use lambda (it can add another params)
-			LOG(INFO) << "WorkerThread::start(" << m_id << ") <-";
 			return true;
 		}
 		void stop()
 		{
-			LOG(INFO) << "WorkerThread::stop(" << m_id << ") ->";
-
 			m_thread.request_stop();
-			LOG(INFO) << "WorkerThread::stop(" << m_id << ") <-";
 		}
 
 		void join()
 		{
-			LOG(INFO) << "WorkerThread::join(" << m_id << ") ->";
 			if (m_thread.joinable())
 			{
 				m_thread.join();
 			}
-			LOG(INFO) << "WorkerThread::join(" << m_id << ") <-";
 		}
 
 		size_t getId() const
@@ -120,14 +104,11 @@ namespace Ex02_JobSystem
 
 		void push(T job)
 		{
-			LOG(INFO) << "WorkerThread::push(" << m_id << ") ->";
 			m_queue.push(std::move(job));
-			LOG(INFO) << "WorkerThread::push(" << m_id << ") <-";
 		}
 
 		std::optional<T> steal()
 		{
-			LOG(INFO) << "WorkerThread::steal(" << m_id << ")";
 			return m_queue.steal();
 		}
 	};

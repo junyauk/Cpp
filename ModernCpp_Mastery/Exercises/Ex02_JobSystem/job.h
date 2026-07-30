@@ -36,9 +36,9 @@ namespace Ex02_JobSystem
 
 		void operator()()
 		{
-			LOG(INFO) << "Job::operator()() ->";
+//			LOG(INFO) << "Job::operator()() ->";
 			m_func();
-			LOG(INFO) << "Job::operator()() <-";
+//			LOG(INFO) << "Job::operator()() <-";
 		}
 	};
 }

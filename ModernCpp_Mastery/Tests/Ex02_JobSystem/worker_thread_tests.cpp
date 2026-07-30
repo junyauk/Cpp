@@ -15,18 +15,19 @@ namespace Ex02_JobSystemTests
 {
 	TEST(JobSystemTests, WorkerThreads)
 	{
+		constexpr size_t NUM_WORKERS = 3;
 		std::vector<std::unique_ptr<WorkerThread<Job>>> workerThreads;
-		workerThreads.reserve(3);
+		workerThreads.reserve(NUM_WORKERS);
 
 		workerThreads.push_back(std::make_unique<WorkerThread<Job>>());
 		workerThreads.push_back(std::make_unique<WorkerThread<Job>>());
 		workerThreads.push_back(std::make_unique<WorkerThread<Job>>());
 
-		for (int i = 0; i < 3; ++i)
+		for (int i = 0; i < NUM_WORKERS; ++i)
 		{
 			workerThreads[i]->setSiblings(workerThreads);
 		}
-		for (int i = 0; i < 3; ++i)
+		for (int i = 0; i < NUM_WORKERS; ++i)
 		{
 			workerThreads[i]->start();
 		}
@@ -44,10 +45,9 @@ namespace Ex02_JobSystemTests
 
 		std::this_thread::sleep_for(std::chrono::milliseconds(3000));
 
-		for (int i = 0; i < 3; ++i)
+		for (int i = 0; i < NUM_WORKERS; ++i)
 		{
 			workerThreads[i]->stop();
 		}
-
 	}
 }

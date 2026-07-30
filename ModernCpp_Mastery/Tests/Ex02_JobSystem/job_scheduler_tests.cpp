@@ -51,6 +51,7 @@ namespace Ex02_JobSystemTests
 		constexpr size_t TASK_COUNT = 10'000;
 		constexpr uint8_t NUM_THREADS = 8;
 		std::array<size_t, NUM_THREADS> workers{};
+		std::array<size_t, NUM_THREADS> child{};
 
 		JobScheduler scheduler(NUM_THREADS);
 
@@ -58,10 +59,10 @@ namespace Ex02_JobSystemTests
 		{
 			scheduler.submit([&workers]()
 				{
-					size_t m_id = Ex02_JobSystem::t_currentWorkerId;
-					if (m_id != Ex02_JobSystem::INVALID_WORKER_ID)
+					size_t id = Ex02_JobSystem::t_currentWorkerId;
+					if (id != Ex02_JobSystem::INVALID_WORKER_ID)
 					{
-						workers[m_id]++;
+						workers[id]++;
 					}
 				});
 		}
@@ -81,4 +82,63 @@ namespace Ex02_JobSystemTests
 			ASSERT_TRUE(v != 0);
 		}
 	}
+
+	TEST(JobSystemTests, JobScheduler_Stress_Nested)
+	{
+		constexpr size_t TASK_COUNT = 10'000;
+		constexpr size_t CHILDREN_COUNT = 100;
+		constexpr uint8_t NUM_THREADS = 8;
+		std::array<size_t, NUM_THREADS> workers{};
+		std::array<size_t, NUM_THREADS> children{};
+
+		JobScheduler scheduler(NUM_THREADS);
+
+		for (size_t i = 0; i < TASK_COUNT; ++i)
+		{
+			scheduler.submit([&scheduler, &workers, &children]()
+				{
+					size_t id = Ex02_JobSystem::t_currentWorkerId;
+					if (id != Ex02_JobSystem::INVALID_WORKER_ID)
+					{
+						for (size_t j = 0; j < CHILDREN_COUNT; ++j)
+						{
+							scheduler.submit([&children]()
+								{
+									size_t child_id = Ex02_JobSystem::t_currentWorkerId;
+									if (child_id != Ex02_JobSystem::INVALID_WORKER_ID)
+									{
+										children[child_id]++;
+									}
+								});
+						}
+						workers[id]++;
+					}
+				});
+		}
+
+		scheduler.stop();
+		scheduler.join();
+
+		size_t sum = 0;
+		for (size_t v : workers)
+		{
+			sum += v;
+		}
+		ASSERT_EQ(TASK_COUNT, sum);
+
+		sum = 0;
+		for (size_t v : children)
+		{
+			sum += v;
+		}
+		ASSERT_EQ(TASK_COUNT * CHILDREN_COUNT, sum);
+
+		for (size_t v : workers)
+		{
+			ASSERT_TRUE(v != 0);
+		}
+	}
+
+
+
 }
