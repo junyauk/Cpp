@@ -1,0 +1,9 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="Benchmarks/Benchmarks.vcxproj" Id="bcb80417-798b-41d5-8846-6b33473117db" />
+  <Project Path="Exercises/Exercises.vcxproj" Id="2bbfd739-7882-4a3d-ae8e-602146fb89b7" />
+  <Project Path="Tests/Tests.vcxproj" Id="175e6d90-e732-49c2-ba87-79aafb376f51" />
+</Solution>

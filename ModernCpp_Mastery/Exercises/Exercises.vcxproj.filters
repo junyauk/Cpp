@@ -45,6 +45,21 @@
     <ClInclude Include="Ex02_JobSystem\job_scheduler.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="Ex03_OrderBookProcessor\IOrderParser.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Ex03_OrderBookProcessor\IOrderMatcher.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Ex03_OrderBookProcessor\ValidPriceConcept.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Ex03_OrderBookProcessor\OrderConcept.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Ex03_OrderBookProcessor\MarketDataProcessor.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Ex01_ImagePipeline\pixel.h">
@@ -69,6 +84,12 @@
       <Filter>ヘッダー ファイル</Filter>
     </ClCompile>
     <ClCompile Include="SimpleLogger\simple_logger.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Ex03_OrderBookProcessor\SIMDFastParser.h">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Ex03_OrderBookProcessor\LockFreeObjectPool.h">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>

@@ -1,5 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\googlebenchmark.1.8.3.1\build\googlebenchmark.props" Condition="Exists('..\packages\googlebenchmark.1.8.3.1\build\googlebenchmark.props')" />
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -21,32 +22,32 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>18.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{a549382e-0189-4240-8214-56701330a066}</ProjectGuid>
-    <RootNamespace>Exercises</RootNamespace>
+    <ProjectGuid>{bcb80417-798b-41d5-8846-6b33473117db}</ProjectGuid>
+    <RootNamespace>Benchmarks</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v145</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v145</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v145</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v145</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -70,20 +71,29 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LibraryPath>$(SolutionDir)$(PlatformTarget)\$(Configuration);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LibraryPath>$(SolutionDir)$(PlatformTarget)\$(Configuration);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LibraryPath>$(SolutionDir)$(PlatformTarget)\$(Configuration);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LibraryPath>$(SolutionDir)$(PlatformTarget)\$(Configuration);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BENCHMARK_STATIC_DEFINE</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(ProjectDir)SimpleLogger;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Exercises\Ex01_SRWLock_CondVar;$(SolutionDir)Exercises\Ex02_ThreadPool_WorkTimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>
-      </SubSystem>
+      <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <Manifest>
@@ -96,17 +106,15 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BENCHMARK_STATIC_DEFINE</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(ProjectDir)SimpleLogger;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Exercises\Ex01_SRWLock_CondVar;$(SolutionDir)Exercises\Ex02_ThreadPool_WorkTimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>
-      </SubSystem>
+      <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
     </Link>
     <Manifest>
       <EnableSegmentHeap>true</EnableSegmentHeap>
@@ -116,16 +124,13 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BENCHMARK_STATIC_DEFINE</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(ProjectDir)SimpleLogger;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Exercises\Ex01_SRWLock_CondVar;$(SolutionDir)Exercises\Ex02_ThreadPool_WorkTimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>
-      </SubSystem>
+      <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <Manifest>
@@ -138,52 +143,40 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BENCHMARK_STATIC_DEFINE</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(ProjectDir)SimpleLogger;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Exercises\Ex01_SRWLock_CondVar;$(SolutionDir)Exercises\Ex02_ThreadPool_WorkTimer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>
-      </SubSystem>
+      <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
     </Link>
     <Manifest>
       <EnableSegmentHeap>true</EnableSegmentHeap>
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Ex01_ImagePipeline\blur_filter.h" />
-    <ClInclude Include="Ex01_ImagePipeline\edge_filter.h" />
-    <ClInclude Include="Ex01_ImagePipeline\grayscale_filter.h" />
-    <ClInclude Include="Ex01_ImagePipeline\image_filter.h" />
-    <ClInclude Include="Ex01_ImagePipeline\image.h" />
-    <ClInclude Include="Ex01_ImagePipeline\sepia_filter.h" />
-    <ClInclude Include="Ex01_ImagePipeline\threshold_filter.h" />
-    <ClInclude Include="Ex02_JobSystem\job.h" />
-    <ClInclude Include="Ex02_JobSystem\job_scheduler.h" />
-    <ClInclude Include="Ex03_OrderBookProcessor\IOrderMatcher.h" />
-    <ClInclude Include="Ex03_OrderBookProcessor\IOrderParser.h" />
-    <ClInclude Include="Ex03_OrderBookProcessor\MarketDataProcessor.h" />
-    <ClInclude Include="Ex03_OrderBookProcessor\OrderConcept.h" />
-    <ClInclude Include="Ex03_OrderBookProcessor\ValidPriceConcept.h" />
-    <ClInclude Include="SimpleLogger\simple_logger.h" />
+    <ClCompile Include="Ex01_SRWLock_CondVar\Benchmarks.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Ex01_ImagePipeline\image_pipeline.h" />
-    <ClCompile Include="Ex01_ImagePipeline\main.cpp" />
-    <ClCompile Include="Ex01_ImagePipeline\pixel.h" />
-    <ClCompile Include="Ex01_ImagePipeline\slice_metadata.h" />
-    <ClCompile Include="Ex01_ImagePipeline\thread_pool.h" />
-    <ClCompile Include="Ex02_JobSystem\worker_thread.h" />
-    <ClCompile Include="Ex02_JobSystem\work_stealing_queue.h" />
-    <ClCompile Include="Ex03_OrderBookProcessor\LockFreeObjectPool.h" />
-    <ClCompile Include="Ex03_OrderBookProcessor\SIMDFastParser.h" />
-    <ClCompile Include="SimpleLogger\simple_logger.cpp" />
+    <ProjectReference Include="..\Exercises\Exercises.vcxproj">
+      <Project>{2bbfd739-7882-4a3d-ae8e-602146fb89b7}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\packages\googlebenchmark.1.8.3.1\build\googlebenchmark.targets" Condition="Exists('..\packages\googlebenchmark.1.8.3.1\build\googlebenchmark.targets')" />
   </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>このプロジェクトは、このコンピューター上にない NuGet パッケージを参照しています。それらのパッケージをダウンロードするには、[NuGet パッケージの復元] を使用します。詳細については、http://go.microsoft.com/fwlink/?LinkID=322105 を参照してください。見つからないファイルは {0} です。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\googlebenchmark.1.8.3.1\build\googlebenchmark.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\googlebenchmark.1.8.3.1\build\googlebenchmark.props'))" />
+    <Error Condition="!Exists('..\packages\googlebenchmark.1.8.3.1\build\googlebenchmark.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\googlebenchmark.1.8.3.1\build\googlebenchmark.targets'))" />
+  </Target>
 </Project>
