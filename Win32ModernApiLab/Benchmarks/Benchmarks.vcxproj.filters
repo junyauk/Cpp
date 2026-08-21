@@ -15,11 +15,19 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Ex01_SRWLock_CondVar\Benchmarks.cpp">
+    <ClCompile Include="Ex01_SRWLock_CondVar\srwlock_condvar_benchmarks.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Ex02_ThreadPool_WorkTimer\threadpool_worktimer_benchmarks.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Ex02_ThreadPool_WorkTimer\threadpool_worktimer_benchmarks.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

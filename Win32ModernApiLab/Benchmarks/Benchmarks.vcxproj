@@ -158,7 +158,8 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Ex01_SRWLock_CondVar\Benchmarks.cpp" />
+    <ClCompile Include="Ex01_SRWLock_CondVar\srwlock_condvar_benchmarks.cpp" />
+    <ClCompile Include="Ex02_ThreadPool_WorkTimer\threadpool_worktimer_benchmarks.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Exercises\Exercises.vcxproj">
@@ -167,6 +168,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Ex02_ThreadPool_WorkTimer\threadpool_worktimer_benchmarks.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

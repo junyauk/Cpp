@@ -27,6 +27,21 @@
     <ClInclude Include="Ex01_SRWLock_CondVar\srwlockwrapper.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="Ex02_ThreadPool_WorkTimer\taskdata.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Ex02_ThreadPool_WorkTimer\ipipeline.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Ex02_ThreadPool_WorkTimer\classicthreadpipeline.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Ex02_ThreadPool_WorkTimer\modernthreadpoolpipeline.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Ex02_ThreadPool_WorkTimer\threadpool.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Ex01_SRWLock_CondVar\classicmutexcache.cpp">
@@ -36,6 +51,15 @@
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="Ex01_SRWLock_CondVar\main.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Ex02_ThreadPool_WorkTimer\classicthreadpipeline.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Ex02_ThreadPool_WorkTimer\modernthreadpoolpipeline.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Ex02_ThreadPool_WorkTimer\Threadpool.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>

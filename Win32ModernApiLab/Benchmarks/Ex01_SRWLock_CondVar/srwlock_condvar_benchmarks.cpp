@@ -91,8 +91,10 @@ BENCHMARK_DEFINE_F(CacheFixture, ModernSrwCacheGet)(benchmark::State& state)
 	}
 }
 
+#if 0
 BENCHMARK_REGISTER_F(CacheFixture, ClassicMutexCacheGet)->Threads(1)->Threads(2)->Threads(4)->Threads(8)->Threads(16)->UseRealTime();
 BENCHMARK_REGISTER_F(CacheFixture, ModernSrwCacheGet)->Threads(1)->Threads(2)->Threads(4)->Threads(8)->Threads(16)->UseRealTime();
+#endif
 
 BENCHMARK_MAIN();
 

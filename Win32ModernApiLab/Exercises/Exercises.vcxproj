@@ -23,11 +23,19 @@
     <ClInclude Include="Ex01_SRWLock_CondVar\icache.h" />
     <ClInclude Include="Ex01_SRWLock_CondVar\modernsrwcache.h" />
     <ClInclude Include="Ex01_SRWLock_CondVar\srwlockwrapper.h" />
+    <ClInclude Include="Ex02_ThreadPool_WorkTimer\threadpool.h" />
+    <ClInclude Include="Ex02_ThreadPool_WorkTimer\classicthreadpipeline.h" />
+    <ClInclude Include="Ex02_ThreadPool_WorkTimer\ipipeline.h" />
+    <ClInclude Include="Ex02_ThreadPool_WorkTimer\modernthreadpoolpipeline.h" />
+    <ClInclude Include="Ex02_ThreadPool_WorkTimer\taskdata.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Ex01_SRWLock_CondVar\classicmutexcache.cpp" />
     <ClCompile Include="Ex01_SRWLock_CondVar\main.cpp" />
     <ClCompile Include="Ex01_SRWLock_CondVar\modernsrwcache.cpp" />
+    <ClCompile Include="Ex02_ThreadPool_WorkTimer\classicthreadpipeline.cpp" />
+    <ClCompile Include="Ex02_ThreadPool_WorkTimer\modernthreadpoolpipeline.cpp" />
+    <ClCompile Include="Ex02_ThreadPool_WorkTimer\Threadpool.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>18.0</VCProjectVersion>

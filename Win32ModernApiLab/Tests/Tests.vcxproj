@@ -121,6 +121,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Ex01_SRWLock_CondVar\CacheTests.cpp" />
+    <ClCompile Include="Ex02_ThreadPool_WorkTimer\threadpooltests.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
