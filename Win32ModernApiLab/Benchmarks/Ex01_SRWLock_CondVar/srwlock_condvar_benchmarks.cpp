@@ -6,6 +6,9 @@
 
 using namespace Ex01_SRWLock_CondVar;
 
+// Note:
+// This demonstrates how to use Google test fixture.
+
 class CacheFixture : public benchmark::Fixture
 {
 public:

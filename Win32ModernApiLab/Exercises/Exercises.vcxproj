@@ -28,6 +28,11 @@
     <ClInclude Include="Ex02_ThreadPool_WorkTimer\ipipeline.h" />
     <ClInclude Include="Ex02_ThreadPool_WorkTimer\modernthreadpoolpipeline.h" />
     <ClInclude Include="Ex02_ThreadPool_WorkTimer\taskdata.h" />
+    <ClInclude Include="Ex03_SyncBarrier_Pipeline\classicbarrier.h" />
+    <ClInclude Include="Ex03_SyncBarrier_Pipeline\classicbarrierpipeline.h" />
+    <ClInclude Include="Ex03_SyncBarrier_Pipeline\framebatch.h" />
+    <ClInclude Include="Ex03_SyncBarrier_Pipeline\modernsyncbarrierpipeline.h" />
+    <ClInclude Include="Ex03_SyncBarrier_Pipeline\pipelinemetrics.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Ex01_SRWLock_CondVar\classicmutexcache.cpp" />
