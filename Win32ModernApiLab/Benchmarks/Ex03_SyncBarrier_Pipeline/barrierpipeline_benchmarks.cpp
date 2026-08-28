@@ -31,6 +31,7 @@ static void BM_Pipeline(benchmark::State& state)
 	state.SetItemsProcessed(state.iterations() * state.range(0));
 	state.SetBytesProcessed(state.iterations() * state.range(0) * sizeof(float));
 }
-
+#if 0
 BENCHMARK_TEMPLATE(BM_Pipeline, ClassicBarrierPipeline)->Range(10000, 1000000);
 BENCHMARK_TEMPLATE(BM_Pipeline, ModernSyncBarrierPipeline)->Range(10000, 1000000);
+#endif

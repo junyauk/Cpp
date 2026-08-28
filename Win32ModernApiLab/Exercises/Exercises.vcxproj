@@ -33,6 +33,11 @@
     <ClInclude Include="Ex03_SyncBarrier_Pipeline\framebatch.h" />
     <ClInclude Include="Ex03_SyncBarrier_Pipeline\modernsyncbarrierpipeline.h" />
     <ClInclude Include="Ex03_SyncBarrier_Pipeline\pipelinemetrics.h" />
+    <ClInclude Include="Ex04_AddressWait_OnceInit\classicdispatchermanager.h" />
+    <ClInclude Include="Ex04_AddressWait_OnceInit\classicevent.h" />
+    <ClInclude Include="Ex04_AddressWait_OnceInit\moderndispatchernanager.h" />
+    <ClInclude Include="Ex04_AddressWait_OnceInit\modernevent.h" />
+    <ClInclude Include="Ex04_AddressWait_OnceInit\taskdata.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Ex01_SRWLock_CondVar\classicmutexcache.cpp" />

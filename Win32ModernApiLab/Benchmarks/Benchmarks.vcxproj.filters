@@ -24,6 +24,9 @@
     <ClCompile Include="Ex03_SyncBarrier_Pipeline\barrierpipeline_benchmarks.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
+    <ClCompile Include="Ex04_AddressWait_OnceInit\dispatchermanager_benchmarks.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

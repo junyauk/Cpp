@@ -161,6 +161,7 @@
     <ClCompile Include="Ex01_SRWLock_CondVar\srwlock_condvar_benchmarks.cpp" />
     <ClCompile Include="Ex02_ThreadPool_WorkTimer\threadpool_worktimer_benchmarks.cpp" />
     <ClCompile Include="Ex03_SyncBarrier_Pipeline\barrierpipeline_benchmarks.cpp" />
+    <ClCompile Include="Ex04_AddressWait_OnceInit\dispatchermanager_benchmarks.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Exercises\Exercises.vcxproj">

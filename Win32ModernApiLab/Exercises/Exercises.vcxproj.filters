@@ -57,6 +57,21 @@
     <ClInclude Include="Ex03_SyncBarrier_Pipeline\classicbarrier.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="Ex04_AddressWait_OnceInit\moderndispatchernanager.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Ex04_AddressWait_OnceInit\classicevent.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Ex04_AddressWait_OnceInit\modernevent.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Ex04_AddressWait_OnceInit\classicdispatchermanager.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Ex04_AddressWait_OnceInit\taskdata.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Ex01_SRWLock_CondVar\classicmutexcache.cpp">
