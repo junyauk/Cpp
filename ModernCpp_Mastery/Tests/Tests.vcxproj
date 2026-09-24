@@ -42,7 +42,7 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>$(SolutionDir)Exercises\SimpleLogger;$(SolutionDir)Exercises\Ex01_ImagePipeline;$(SolutionDir)Exercises\Ex02_JobSystem;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Exercises\SimpleLogger;$(SolutionDir)Exercises\Ex01_ImagePipeline;$(SolutionDir)Exercises\Ex02_JobSystem;$(SolutionDir)Exercises\Ex03_OrderBookProcessor;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
@@ -59,7 +59,7 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>$(SolutionDir)Exercises\SimpleLogger;$(SolutionDir)Exercises\Ex01_ImagePipeline;$(SolutionDir)Exercises\Ex02_JobSystem;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Exercises\SimpleLogger;$(SolutionDir)Exercises\Ex01_ImagePipeline;$(SolutionDir)Exercises\Ex02_JobSystem;$(SolutionDir)Exercises\Ex03_OrderBookProcessor;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
@@ -75,7 +75,7 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <AdditionalIncludeDirectories>$(SolutionDir)Exercises\SimpleLogger;$(SolutionDir)Exercises\Ex01_ImagePipeline;$(SolutionDir)Exercises\Ex02_JobSystem;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Exercises\SimpleLogger;$(SolutionDir)Exercises\Ex01_ImagePipeline;$(SolutionDir)Exercises\Ex02_JobSystem;$(SolutionDir)Exercises\Ex03_OrderBookProcessor;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
@@ -93,7 +93,7 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <AdditionalIncludeDirectories>$(SolutionDir)Exercises\SimpleLogger;$(SolutionDir)Exercises\Ex01_ImagePipeline;$(SolutionDir)Exercises\Ex02_JobSystem;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Exercises\SimpleLogger;$(SolutionDir)Exercises\Ex01_ImagePipeline;$(SolutionDir)Exercises\Ex02_JobSystem;$(SolutionDir)Exercises\Ex03_OrderBookProcessor;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
@@ -116,6 +116,7 @@
     <ClCompile Include="Ex02_JobSystem\job_scheduler_tests.cpp" />
     <ClCompile Include="Ex02_JobSystem\job_tests.cpp" />
     <ClCompile Include="Ex02_JobSystem\worker_thread_tests.cpp" />
+    <ClCompile Include="Ex03_OrderBookProcessor\orderbooktests.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

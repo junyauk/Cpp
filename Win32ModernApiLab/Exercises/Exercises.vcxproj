@@ -38,6 +38,13 @@
     <ClInclude Include="Ex04_AddressWait_OnceInit\moderndispatchernanager.h" />
     <ClInclude Include="Ex04_AddressWait_OnceInit\modernevent.h" />
     <ClInclude Include="Ex04_AddressWait_OnceInit\taskdata.h" />
+    <ClInclude Include="Ex05_ThreadPool_IO\classiclogprocessor.h" />
+    <ClInclude Include="Ex05_ThreadPool_IO\ilogprocessor.h" />
+    <ClInclude Include="Ex05_ThreadPool_IO\loganalysisresult.h" />
+    <ClInclude Include="Ex05_ThreadPool_IO\logchunkcontext.h" />
+    <ClInclude Include="Ex05_ThreadPool_IO\modernlogprocessor.h" />
+    <ClInclude Include="Ex05_ThreadPool_IO\scopedhandle.h" />
+    <ClInclude Include="Ex05_ThreadPool_IO\scopedthreadpoolio.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Ex01_SRWLock_CondVar\classicmutexcache.cpp" />

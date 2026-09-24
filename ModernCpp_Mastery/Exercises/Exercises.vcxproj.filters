@@ -45,19 +45,22 @@
     <ClInclude Include="Ex02_JobSystem\job_scheduler.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Ex03_OrderBookProcessor\IOrderParser.h">
+    <ClInclude Include="Ex03_OrderBookProcessor\order.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Ex03_OrderBookProcessor\IOrderMatcher.h">
+    <ClInclude Include="Ex03_OrderBookProcessor\iorderbook.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Ex03_OrderBookProcessor\ValidPriceConcept.h">
+    <ClInclude Include="Ex03_OrderBookProcessor\criticalsection.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Ex03_OrderBookProcessor\OrderConcept.h">
+    <ClInclude Include="Ex03_OrderBookProcessor\modernorderbook.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Ex03_OrderBookProcessor\MarketDataProcessor.h">
+    <ClInclude Include="Ex03_OrderBookProcessor\classicorderbook.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Ex03_OrderBookProcessor\srwlockwrapper.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
   </ItemGroup>
@@ -87,9 +90,6 @@
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="Ex03_OrderBookProcessor\SIMDFastParser.h">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="Ex03_OrderBookProcessor\LockFreeObjectPool.h">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>

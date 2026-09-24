@@ -90,7 +90,7 @@
       <PreprocessorDefinitions>BENCHMARK_STATIC_DEFINE</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)Exercises\Ex01_SRWLock_CondVar;$(SolutionDir)Exercises\Ex02_ThreadPool_WorkTimer;$(SolutionDir)Exercises\Ex03_SyncBarrier_Pipeline;$(SolutionDir)Exercises\Ex04_AddressWait_OnceInit;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Exercises\Ex01_SRWLock_CondVar;$(SolutionDir)Exercises\Ex02_ThreadPool_WorkTimer;$(SolutionDir)Exercises\Ex03_SyncBarrier_Pipeline;$(SolutionDir)Exercises\Ex04_AddressWait_OnceInit;$(SolutionDir)Exercises\Ex05_ThreadPool_IO;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -109,7 +109,7 @@
       <PreprocessorDefinitions>BENCHMARK_STATIC_DEFINE</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)Exercises\Ex01_SRWLock_CondVar;$(SolutionDir)Exercises\Ex02_ThreadPool_WorkTimer;$(SolutionDir)Exercises\Ex03_SyncBarrier_Pipeline;$(SolutionDir)Exercises\Ex04_AddressWait_OnceInit;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Exercises\Ex01_SRWLock_CondVar;$(SolutionDir)Exercises\Ex02_ThreadPool_WorkTimer;$(SolutionDir)Exercises\Ex03_SyncBarrier_Pipeline;$(SolutionDir)Exercises\Ex04_AddressWait_OnceInit;$(SolutionDir)Exercises\Ex05_ThreadPool_IO;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -127,7 +127,7 @@
       <PreprocessorDefinitions>BENCHMARK_STATIC_DEFINE</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)Exercises\Ex01_SRWLock_CondVar;$(SolutionDir)Exercises\Ex02_ThreadPool_WorkTimer;$(SolutionDir)Exercises\Ex03_SyncBarrier_Pipeline;$(SolutionDir)Exercises\Ex04_AddressWait_OnceInit;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Exercises\Ex01_SRWLock_CondVar;$(SolutionDir)Exercises\Ex02_ThreadPool_WorkTimer;$(SolutionDir)Exercises\Ex03_SyncBarrier_Pipeline;$(SolutionDir)Exercises\Ex04_AddressWait_OnceInit;$(SolutionDir)Exercises\Ex05_ThreadPool_IO;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -146,7 +146,7 @@
       <PreprocessorDefinitions>BENCHMARK_STATIC_DEFINE</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)Exercises\Ex01_SRWLock_CondVar;$(SolutionDir)Exercises\Ex02_ThreadPool_WorkTimer;$(SolutionDir)Exercises\Ex03_SyncBarrier_Pipeline;$(SolutionDir)Exercises\Ex04_AddressWait_OnceInit;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Exercises\Ex01_SRWLock_CondVar;$(SolutionDir)Exercises\Ex02_ThreadPool_WorkTimer;$(SolutionDir)Exercises\Ex03_SyncBarrier_Pipeline;$(SolutionDir)Exercises\Ex04_AddressWait_OnceInit;$(SolutionDir)Exercises\Ex05_ThreadPool_IO;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

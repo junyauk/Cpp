@@ -78,7 +78,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);BENCHMARK_STATIC_DEFINE</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)Exercises\Ex01_ImagePipeline;$(SolutionDir)Exercises\Ex02_JobSystem;$(SolutionDir)Exercises\SimpleLogger;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Exercises\Ex01_ImagePipeline;$(SolutionDir)Exercises\Ex02_JobSystem;$(SolutionDir)Exercises\Ex03_OrderBookProcessor;$(SolutionDir)Exercises\SimpleLogger;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -98,7 +98,7 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions);BENCHMARK_STATIC_DEFINE</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)Exercises\Ex01_ImagePipeline;$(SolutionDir)Exercises\Ex02_JobSystem;$(SolutionDir)Exercises\SimpleLogger;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Exercises\Ex01_ImagePipeline;$(SolutionDir)Exercises\Ex02_JobSystem;$(SolutionDir)Exercises\Ex03_OrderBookProcessor;$(SolutionDir)Exercises\SimpleLogger;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -116,7 +116,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);BENCHMARK_STATIC_DEFINE</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)Exercises\Ex01_ImagePipeline;$(SolutionDir)Exercises\Ex02_JobSystem;$(SolutionDir)Exercises\SimpleLogger;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Exercises\Ex01_ImagePipeline;$(SolutionDir)Exercises\Ex02_JobSystem;$(SolutionDir)Exercises\Ex03_OrderBookProcessor;$(SolutionDir)Exercises\SimpleLogger;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -136,7 +136,7 @@
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions);BENCHMARK_STATIC_DEFINE</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)Exercises\Ex01_ImagePipeline;$(SolutionDir)Exercises\Ex02_JobSystem;$(SolutionDir)Exercises\SimpleLogger;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Exercises\Ex01_ImagePipeline;$(SolutionDir)Exercises\Ex02_JobSystem;$(SolutionDir)Exercises\Ex03_OrderBookProcessor;$(SolutionDir)Exercises\SimpleLogger;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -150,6 +150,8 @@
   <ItemGroup>
     <ClCompile Include="Ex01_ImagePipeline\image_pipeline_benchmarks.cpp" />
     <ClCompile Include="Ex02_JobSystem\job_scheduler_benchmarks.cpp" />
+    <ClCompile Include="Ex03_OrderBookProcessor\orderbookbenchmarks.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

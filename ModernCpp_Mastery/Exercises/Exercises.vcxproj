@@ -164,11 +164,12 @@
     <ClInclude Include="Ex01_ImagePipeline\threshold_filter.h" />
     <ClInclude Include="Ex02_JobSystem\job.h" />
     <ClInclude Include="Ex02_JobSystem\job_scheduler.h" />
-    <ClInclude Include="Ex03_OrderBookProcessor\IOrderMatcher.h" />
-    <ClInclude Include="Ex03_OrderBookProcessor\IOrderParser.h" />
-    <ClInclude Include="Ex03_OrderBookProcessor\MarketDataProcessor.h" />
-    <ClInclude Include="Ex03_OrderBookProcessor\OrderConcept.h" />
-    <ClInclude Include="Ex03_OrderBookProcessor\ValidPriceConcept.h" />
+    <ClInclude Include="Ex03_OrderBookProcessor\classicorderbook.h" />
+    <ClInclude Include="Ex03_OrderBookProcessor\criticalsection.h" />
+    <ClInclude Include="Ex03_OrderBookProcessor\modernorderbook.h" />
+    <ClInclude Include="Ex03_OrderBookProcessor\order.h" />
+    <ClInclude Include="Ex03_OrderBookProcessor\iorderbook.h" />
+    <ClInclude Include="Ex03_OrderBookProcessor\srwlockwrapper.h" />
     <ClInclude Include="SimpleLogger\simple_logger.h" />
   </ItemGroup>
   <ItemGroup>
@@ -179,7 +180,6 @@
     <ClCompile Include="Ex01_ImagePipeline\thread_pool.h" />
     <ClCompile Include="Ex02_JobSystem\worker_thread.h" />
     <ClCompile Include="Ex02_JobSystem\work_stealing_queue.h" />
-    <ClCompile Include="Ex03_OrderBookProcessor\LockFreeObjectPool.h" />
     <ClCompile Include="Ex03_OrderBookProcessor\SIMDFastParser.h" />
     <ClCompile Include="SimpleLogger\simple_logger.cpp" />
   </ItemGroup>

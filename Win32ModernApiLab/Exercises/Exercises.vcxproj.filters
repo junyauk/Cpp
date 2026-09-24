@@ -72,6 +72,27 @@
     <ClInclude Include="Ex04_AddressWait_OnceInit\taskdata.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="Ex05_ThreadPool_IO\classiclogprocessor.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Ex05_ThreadPool_IO\modernlogprocessor.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Ex05_ThreadPool_IO\scopedhandle.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Ex05_ThreadPool_IO\scopedthreadpoolio.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Ex05_ThreadPool_IO\ilogprocessor.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Ex05_ThreadPool_IO\logchunkcontext.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Ex05_ThreadPool_IO\loganalysisresult.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Ex01_SRWLock_CondVar\classicmutexcache.cpp">

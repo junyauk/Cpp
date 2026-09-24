@@ -18,5 +18,6 @@
     <ClCompile Include="Ex02_JobSystem\job_tests.cpp" />
     <ClCompile Include="Ex02_JobSystem\worker_thread_tests.cpp" />
     <ClCompile Include="Ex02_JobSystem\job_scheduler_tests.cpp" />
+    <ClCompile Include="Ex03_OrderBookProcessor\orderbooktests.cpp" />
   </ItemGroup>
 </Project>

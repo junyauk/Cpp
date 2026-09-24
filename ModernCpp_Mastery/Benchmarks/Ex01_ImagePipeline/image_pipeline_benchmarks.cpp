@@ -10,7 +10,7 @@
 using namespace Ex01_ImagePipeline;
 
 template<Strategy S>
-static void BM_ThresholdFilter(benchmark::State& state)
+static void Ex01_BM_ThresholdFilter(benchmark::State& state)
 {
 	uint16_t w = 4096;
 	uint16_t h = 4096;
@@ -50,7 +50,7 @@ static void BM_ThresholdFilter(benchmark::State& state)
 }
 
 template<Strategy S>
-static void BM_GrayScaleFilter(benchmark::State& state)
+static void Ex01_BM_GrayScaleFilter(benchmark::State& state)
 {
 	uint16_t w = 4096;
 	uint16_t h = 4096;
@@ -94,7 +94,7 @@ static void BM_GrayScaleFilter(benchmark::State& state)
 }
 
 template<Strategy S>
-static void BM_SepiaFilter(benchmark::State& state)
+static void Ex01_BM_SepiaFilter(benchmark::State& state)
 {
 	uint16_t w = 4096;
 	uint16_t h = 4096;
@@ -134,7 +134,7 @@ static void BM_SepiaFilter(benchmark::State& state)
 }
 
 template<Strategy S>
-static void BM_BlurFilter(benchmark::State& state)
+static void Ex01_BM_BlurFilter(benchmark::State& state)
 {
 	uint16_t w = 4096;
 	uint16_t h = 4096;
@@ -174,7 +174,7 @@ static void BM_BlurFilter(benchmark::State& state)
 }
 
 template<Strategy S>
-static void BM_EdgeFilter(benchmark::State& state)
+static void Ex01_BM_EdgeFilter(benchmark::State& state)
 {
 	uint16_t w = 4096;
 	uint16_t h = 4096;
@@ -215,17 +215,17 @@ static void BM_EdgeFilter(benchmark::State& state)
 	state.SetItemsProcessed(state.iterations() * static_cast<int64_t>(w) * h);
 }
 
-BENCHMARK_TEMPLATE(BM_BlurFilter, Strategy::Naive)->UseRealTime();
-BENCHMARK_TEMPLATE(BM_BlurFilter, Strategy::Simd)->UseRealTime();
-BENCHMARK_TEMPLATE(BM_EdgeFilter, Strategy::Naive)->UseRealTime();
-BENCHMARK_TEMPLATE(BM_EdgeFilter, Strategy::Simd)->UseRealTime();
-BENCHMARK_TEMPLATE(BM_GrayScaleFilter, Strategy::Naive)->UseRealTime();
-BENCHMARK_TEMPLATE(BM_GrayScaleFilter, Strategy::Simd)->UseRealTime();
-BENCHMARK_TEMPLATE(BM_SepiaFilter, Strategy::Naive)->UseRealTime();
-BENCHMARK_TEMPLATE(BM_SepiaFilter, Strategy::Simd1)->UseRealTime();
-BENCHMARK_TEMPLATE(BM_SepiaFilter, Strategy::Simd2)->UseRealTime();
-BENCHMARK_TEMPLATE(BM_ThresholdFilter, Strategy::Naive)->UseRealTime();
-BENCHMARK_TEMPLATE(BM_ThresholdFilter, Strategy::Simd)->UseRealTime();
+BENCHMARK_TEMPLATE(Ex01_BM_BlurFilter, Strategy::Naive)->UseRealTime();
+BENCHMARK_TEMPLATE(Ex01_BM_BlurFilter, Strategy::Simd)->UseRealTime();
+BENCHMARK_TEMPLATE(Ex01_BM_EdgeFilter, Strategy::Naive)->UseRealTime();
+BENCHMARK_TEMPLATE(Ex01_BM_EdgeFilter, Strategy::Simd)->UseRealTime();
+BENCHMARK_TEMPLATE(Ex01_BM_GrayScaleFilter, Strategy::Naive)->UseRealTime();
+BENCHMARK_TEMPLATE(Ex01_BM_GrayScaleFilter, Strategy::Simd)->UseRealTime();
+BENCHMARK_TEMPLATE(Ex01_BM_SepiaFilter, Strategy::Naive)->UseRealTime();
+BENCHMARK_TEMPLATE(Ex01_BM_SepiaFilter, Strategy::Simd1)->UseRealTime();
+BENCHMARK_TEMPLATE(Ex01_BM_SepiaFilter, Strategy::Simd2)->UseRealTime();
+BENCHMARK_TEMPLATE(Ex01_BM_ThresholdFilter, Strategy::Naive)->UseRealTime();
+BENCHMARK_TEMPLATE(Ex01_BM_ThresholdFilter, Strategy::Simd)->UseRealTime();
 
 
-BENCHMARK_MAIN();
+//BENCHMARK_MAIN();

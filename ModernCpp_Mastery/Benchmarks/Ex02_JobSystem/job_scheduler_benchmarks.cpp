@@ -35,7 +35,7 @@ static uint64_t countPrimesInRange(uint64_t start, uint64_t end)
 	return total;
 }
 
-static void BM_PureSequential(benchmark::State& state)
+static void Ex02_BM_PureSequential(benchmark::State& state)
 {
 	for (auto _ : state)
 	{
@@ -50,7 +50,7 @@ static void BM_PureSequential(benchmark::State& state)
 	}
 }
 
-static void BM_JobScheduler_SingleThread(benchmark::State& state)
+static void Ex02_BM_JobScheduler_SingleThread(benchmark::State& state)
 {
 	JobScheduler scheduler(1);
 	for (auto _ : state)
@@ -74,7 +74,7 @@ static void BM_JobScheduler_SingleThread(benchmark::State& state)
 	}
 }
 
-static void BM_JobScheduler_MultiThread(benchmark::State& state)
+static void Ex02_BM_JobScheduler_MultiThread(benchmark::State& state)
 {
 	JobScheduler scheduler(8);
 	for (auto _ : state)
@@ -100,6 +100,6 @@ static void BM_JobScheduler_MultiThread(benchmark::State& state)
 
 
 
-BENCHMARK(BM_PureSequential)->UseRealTime();
-BENCHMARK(BM_JobScheduler_SingleThread)->UseRealTime();
-BENCHMARK(BM_JobScheduler_MultiThread)->UseRealTime();
+BENCHMARK(Ex02_BM_PureSequential)->UseRealTime();
+BENCHMARK(Ex02_BM_JobScheduler_SingleThread)->UseRealTime();
+BENCHMARK(Ex02_BM_JobScheduler_MultiThread)->UseRealTime();
