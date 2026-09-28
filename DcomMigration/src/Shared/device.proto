@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package dcom_migration;
+
+// Motor state data struct
+message MotorState
+{
+	double current_speed = 1;
+	double target_speed = 2;
+	double temperature = 3;
+	bool is_faulted = 4;
+	string fault_code = 5;
+}
+
+message Empty{}
+
+message TargetSpeedRequest
+{
+	double speed = 1;
+}
+
+message ActionResponse
+{
+	bool success = 1;
+}
+
+// Definition of service (interface)
+service GrpcDeviceService
+{
+	// format: "rpc NAME (PARAETERS) returns (RETURN VALUE)"
+	rpc GetState (Empty) returns (MotorState);
+	rpc SetTargetSpeed (TargetSpeedRequest) returns (Empty);
+
+	rpc Start (Empty) returns (ActionResponse);
+	rpc Stop (Empty) returns (ActionResponse);
+
+	rpc ResetAlarm (Empty) returns (Empty);
+}

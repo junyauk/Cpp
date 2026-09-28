@@ -1,0 +1,54 @@
+import "oaidl.idl";
+import "ocidl.idl";
+
+// Contents in this file were manually added.
+// MIDL compiler will generate DcomInterface_h.h and DcomInterface_i.c.
+
+typedef struct tagDcomMotorState
+{
+    double currentSpeed;
+    double targetSpeed;
+    double temperature;
+    boolean isFaulted;
+    BSTR faultCode;
+} DcomMotorState;
+
+
+// Interface
+[
+    object,
+    uuid("6A967CB3-4493-49B1-B94C-2EF365EAF6B6"),   // GUID for interface
+    local,                                          // local marsharing
+    pointer_default(unique)
+]
+interface IDcomDevice : IUnknown
+{
+    HRESULT GetState([out] DcomMotorState* pState);
+
+    HRESULT SetTargetSpeed([in] double speed);
+
+    HRESULT Start([out] boolean* pSuccess);
+    HRESULT Stop([out] boolean* pSuccess);
+
+    HRESULT ResetAlarm();
+};
+
+// Definition of Type libarary
+[
+    uuid("1CFD8E3C-0D73-4465-9003-EC1BA4C0C712"),
+    version(1.0)
+]
+library DcomMigrationLib
+{
+    importlib("stdole32.tlb");
+    importlib("stdole2.tlb");
+
+    [
+        uuid("ED3CD201-5E04-40E9-B6BF-AEB72D9AECDC")    // GUID for CoClass
+    ]
+    coclass DcomDeviceComponent
+    {
+        interface IDcomDevice;
+    };
+};
+

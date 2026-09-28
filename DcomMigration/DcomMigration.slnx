@@ -1,0 +1,29 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Folder Name="/00_Shared/">
+    <File Path="src/Shared/DcomInterface.idl" />
+    <File Path="src/Shared/IDevice.h" />
+  </Folder>
+  <Folder Name="/01_Dcom/">
+    <Project Path="src/Dcom/DcomClient/DcomClient.vcxproj" Id="5554312d-a9d8-494f-a574-75a07bff9e22" />
+    <Project Path="src/Dcom/DcomServer/DcomServer.vcxproj" Id="803853c9-75fd-48af-9942-fbbf25064a51" />
+  </Folder>
+  <Folder Name="/02_Grpc/">
+    <Project Path="src/Grpc/GrpcClient/GrpcClient.vcxproj" Id="47fc59b7-e556-489e-8271-15a19e41be35" />
+    <Project Path="src/Grpc/GrpcServer/GrpcServer.vcxproj" Id="54e1e886-374e-499a-9d16-e69e7541047f" />
+  </Folder>
+  <Folder Name="/03_OpcUa/">
+    <Project Path="src/OpcUa/OpcUaClient/OpcUaClient.vcxproj" Id="38581cc6-522e-4bf4-9240-6d3d3ff2b108" />
+    <Project Path="src/OpcUa/OpcUaServer/OpcUaServer.vcxproj" Id="96427bfd-b081-45ba-a2cf-1eab43a47296" />
+  </Folder>
+  <Folder Name="/04_Mqtt/">
+    <Project Path="src/Mqtt/MqttClient/MqttClient.vcxproj" Id="4491abd5-546c-411c-982b-eeafb7f2bbe2" />
+    <Project Path="src/Mqtt/MqttServer/MqttServer.vcxproj" Id="a648a342-225a-4056-b50f-400fcb5850ca" />
+  </Folder>
+  <Folder Name="/ソリューション項目/">
+    <File Path="README.md" />
+  </Folder>
+</Solution>
