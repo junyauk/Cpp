@@ -1,0 +1,29 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Folder Name="/01_Basic_Echo/">
+    <Project Path="01_Basic_Echo/01_Client/01_Client.vcxproj" Id="1483332f-045b-4f75-83e9-1908f3049b4d" />
+    <Project Path="01_Basic_Echo/01_Server/01_Server.vcxproj" Id="825e3962-8e3e-4fc5-842b-df128e55d9f9" />
+  </Folder>
+  <Folder Name="/02_Continuous_Echo/">
+    <Project Path="02_Continuous_Echo/02_Client/02_Client.vcxproj" Id="160f9700-9c7d-42d8-b8ef-cb456daf9d92" />
+    <Project Path="02_Continuous_Echo/02_Server/02_Server.vcxproj" Id="80cc6f5c-d8be-4257-91d5-677cdbebac7d" />
+  </Folder>
+  <Folder Name="/03_Multi_Client/">
+    <Project Path="03_Multi_Client/03_Client/03_Client.vcxproj" Id="e1924cfe-2bb0-45f7-bdd1-e162e99029f8" />
+    <Project Path="03_Multi_Client/03_Server/03_Server.vcxproj" Id="b67f921f-e97e-404d-bfb1-c37e4670cde8" />
+  </Folder>
+  <Folder Name="/04_NonBlocking_Select/">
+    <Project Path="04_NonBlocking_Select/04_Client/04_Client.vcxproj" Id="50840250-2253-4611-b1e4-20c3cb3ba599" />
+    <Project Path="04_NonBlocking_Select/04_Server/04_Server.vcxproj" Id="af47aa94-fec0-44dc-bc72-b8cc8ac154b1" />
+  </Folder>
+  <Folder Name="/05_Web_Server/">
+    <Project Path="05_Web_Server/05_Server/05_Server.vcxproj" Id="7934c8cf-cdb9-4cca-a49f-03c5fbb59fe2" />
+  </Folder>
+  <Folder Name="/ソリューション項目/">
+    <File Path="README.md" />
+  </Folder>
+  <Project Path="SocketCommon/SocketCommon.vcxproj" Id="cbf7993f-abcf-428a-8d9f-d8426ea8d25e" />
+</Solution>
