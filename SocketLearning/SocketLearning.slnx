@@ -22,6 +22,14 @@
   <Folder Name="/05_Web_Server/">
     <Project Path="05_Web_Server/05_Server/05_Server.vcxproj" Id="7934c8cf-cdb9-4cca-a49f-03c5fbb59fe2" />
   </Folder>
+  <Folder Name="/06_Echo_Server_With_KeepAlive/">
+    <Project Path="06_Echo_Server_With_KeepAlive/06_Client/06_Client.vcxproj" Id="3eb37920-29af-4f80-9a68-ccef72f6209b" />
+    <Project Path="06_Echo_Server_With_KeepAlive/06_Server/06_Server.vcxproj" Id="5d13f973-b00f-4c91-a66a-2c4cf4a1aaf0" />
+  </Folder>
+  <Folder Name="/07_Chat_Lobby/">
+    <Project Path="07_Chat_Lobby/07_Client/07_Client.vcxproj" Id="2103ef4d-c674-4447-b270-e3e6101c851c" />
+    <Project Path="07_Chat_Lobby/07_Server/07_Server.vcxproj" Id="51882b8f-a6f9-4a93-ad64-c0cc8124f230" />
+  </Folder>
   <Folder Name="/ソリューション項目/">
     <File Path="README.md" />
   </Folder>
